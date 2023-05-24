@@ -71,7 +71,7 @@ body{
                 width: 50%;
                 height: 80vh;
                 //border: 2px solid #03987A;
-                background-image: url('./images/myim.png');
+                background-image: url('./myim.png');
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -144,7 +144,7 @@ body{
     }
     body .hero .header .header__logo{
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     body .hero .header .header__nav .navmenu{
@@ -155,12 +155,7 @@ body{
     body .hero .main{
         flex-direction: column;
         height: 75vh;
-        //background-color: #03987A;
-        // padding: 0;
-        // margin: 0;
         gap: 1rem;
-        // width: 80vw;
-        // width: 80v;
     }
 
     body .hero .main .main__img{
@@ -179,20 +174,18 @@ body{
         display: none;
     }
     body .hero .main .content .main__content .text{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         
     }
 
     body .hero .main .content .main__content .text{
         
         span{
-            font-size: 2rem;
+            font-size: 1.3rem;
         }
         
         
     }
-
-
 
     body .hero .footers{
         height: 10vh;

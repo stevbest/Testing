@@ -55,7 +55,7 @@ body .hero .main {
 body .hero .main__img {
   width: 50%;
   height: 80vh;
-  background-image: url("./images/myim.png");
+  background-image: url("./myim.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -111,7 +111,7 @@ body .hero .footers img:hover {
   }
   body .hero .header .header__logo {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   body .hero .header .header__nav .navmenu {
     display: none;
@@ -133,10 +133,10 @@ body .hero .footers img:hover {
     display: none;
   }
   body .hero .main .content .main__content .text {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   body .hero .main .content .main__content .text span {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
   body .hero .footers {
     height: 10vh;
