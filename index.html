@@ -4,46 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <link rel="stylesheet" href="indx.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Menu</title>
 </head>
 <body>
-    <section class="hero">
+    <div class="container">
 
+<!-- header -->
         <div class="header">
 
-            <div class="header__logo">Monday S.<span> Onofurho</span></div>
-            
-            <div class="header__nav">
-                <ul class="navmenu">
-                    <li class="menu__menus">Home</li>
-                    <li class="menu__menus">Portfolio</li>
-                    <li class="menu__menus">Contact</li>
-                </ul>
+            <!-- logo -->
+            <div class="header__logo">mos.Soft</div>
+
+            <!-- menu and close button -->
+            <div class="header__menucontrolbtns">
+                <img src="./menu.svg" alt="" class="menucontrolbtns__menus">
+                <img src="./closebtn.svg" alt="" class="menucontrolbtns__closebtn">
             </div>
-            
-        
+
+            <!-- menus -->
+            <div class="header__btns">
+                <div class="item__">Home</div>
+                <div class="item__">About</div>
+                <div class="item__">Services</div>
+                <div class="item__">Contact</div>
+            </div>
+
         </div>
 
+
+<!-- main  -->
         <div class="main">
-            <div class="main__img"></div>
-            <div class="content">
-                <ul class="main__content">
-                    <li class="maincontent__compliment">Hello 👋</li>
-                    <li class="text maincontent__">I'm <span>MONDAY S. ONOFURHO</span></li>
-                    <li class="text maincontent__">A Senior Software Engineer</li>
-                    <li class="text maincontent__">in Nigeria</li>
+
+            <main class="main__authorpic">
+                <img src="./myim.png" alt="" class="authorpic__">
+            </main>
+
+            <div class="main__authorinfo">
+                <ul class="__infos">
+                    <li class="infos__greeting">Hello 👋</li>
+                    <li class="infos__">I'm <span>Monday Stephen O.</span></li>
+                    <li class="infos__">A senior software</li>
+                    <li class="infos__">engineer at United Kingdom.</li>
                 </ul>
             </div>
         </div>
 
-        <footer class="footers">
-            <img src="./twitter.svg" alt="" class="footer__tw">
-            <img src="./linkedin_circled.svg" alt="" class="footer__ln">
-            <img src="./instagram.svg" alt="" class="footer__in">
-            <img src="./facebook_messenger.svg" alt="" class="footer__ms">
-        </footer>
-    </section>
+        
+<!-- footer -->
+        <div class="footers">
+            <div class="footers__foot">
+                <img src="./twitter.svg" alt="" class="footers__">
+            <img src="./instagram.svg" alt="" class="footers__">
+            <img src="./linkedin_circled.svg" alt="" class="footers__">
+            <img src="./whatsapp.svg" alt="" class="footers__">
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
