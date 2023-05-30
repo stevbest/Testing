@@ -8,59 +8,44 @@
     <title>Menu</title>
 </head>
 <body>
-    <div class="container">
+    <!-- header -->
+    <section class="header">
+       <div class="container">
 
-<!-- header -->
-        <div class="header">
-
-            <!-- logo -->
-            <div class="header__logo">mos.Soft</div>
-
-            <!-- menu and close button -->
-            <div class="header__menucontrolbtns">
-                <img src="./menu.svg" alt="" class="menucontrolbtns__menus">
-                <img src="./closebtn.svg" alt="" class="menucontrolbtns__closebtn">
-            </div>
-
-            <!-- menus -->
-            <div class="header__btns">
-                <div class="item__">Home</div>
-                <div class="item__">About</div>
-                <div class="item__">Services</div>
-                <div class="item__">Contact</div>
-            </div>
-
-        </div>
-
-
-<!-- main  -->
-        <div class="main">
-
-            <main class="main__authorpic">
-                <img src="./myim.png" alt="" class="authorpic__">
-            </main>
-
-            <div class="main__authorinfo">
-                <ul class="__infos">
-                    <li class="infos__greeting">Hello 👋</li>
-                    <li class="infos__">I'm <span>Monday Stephen O.</span></li>
-                    <li class="infos__">A senior software</li>
-                    <li class="infos__">engineer at United Kingdom.</li>
-                </ul>
-            </div>
-        </div>
-
-        
-<!-- footer -->
-        <div class="footers">
-            <div class="footers__foot">
-                <img src="./twitter.svg" alt="" class="footers__">
-            <img src="./instagram.svg" alt="" class="footers__">
-            <img src="./linkedin_circled.svg" alt="" class="footers__">
-            <img src="./whatsapp.svg" alt="" class="footers__">
-            </div>
-        </div>
-
+        <a href="#" class="container__logo"><img src="logo.svg" alt="logo" ></a>
+       <div class="containernav">
+        <ul class="containernav__navlist">
+            <li class="navlist__">Home</li>
+            <li class="navlist__">Pricing</li>
+            <li class="navlist__">About</li>
+            <li class="navlist__">Contact</li>
+        </ul>
+       </div>
+       <button class="btnconnect">Connect Us</button>
     </div>
+    </section>
+
+    <!-- main -->
+    <section class="hero">
+        <div class="container">
+            <img class="authorimg" src="myim.png" alt="autor">
+            <p class="container__aboutauthor">
+                Hello 👋 <br>
+                I'm <span class="authorname">Monday S. Onofurho</span><br>
+                A senior software engineer <br>
+                in Nigeria.
+            </p>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="container">
+            <a href=""><img src="twitter.svg" alt="twitter"></a>
+            <a href=""><img src="instagram.svg" alt="instagram"></a>
+            <a href=""><img src="linkedin_circled.svg" alt="linkedin"></a>
+            <a href=""><img src="whatsapp.svg" alt="whatsapp"></a>
+        </div>
+    </section>
 </body>
 </html>

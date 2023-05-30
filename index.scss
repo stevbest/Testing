@@ -1,268 +1,210 @@
 *{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-
-    text-decoration: none;
-    list-style: none;
-
 }
 
-$mycolor: #03987A;
+html{
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+}
 
-$bp: (
+$bp:(
     mobile:480px,
-    tablet:760px,
+    tablet: 780px,
 );
 
-@mixin query ($screen){
-    @each $key, $value in $bp{
-        @if($screen == $key){
-            @media (max-width:$value){
-                @content;
-            }
-        }
-    }
-}
-
-
 body{
-    font-family: sans-serif;
+    height: 100vh;
+    .container{
+        width: 85%;
+        //background-color: aquamarine;
+        margin: 0 auto;
+    }
 
-    //header control
+    //header
     .header{
-        
-        //background-color: #696969 ;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        height: 10vh;
-        padding: 0rem 1rem;
-
-
-        &__logo{
-            font-size: clamp(1.38rem, 1.27rem, 1.42rem);
-            font-weight: bold;
-            color: #03987A;
-        }
-
-
-        &__menucontrolbtns{
-            width: 1vw;
-            display: none;
-        }
-
-
-        &__btns{
+        padding: 1.5rem 0;
+        .container{
             display: flex;
             flex-direction: row;
-            // transition: all 0.5s ease-in;
-            gap: 1.5rem;
-            [class ^="item__"]{
-                transition: all 0.5s ease-in;
-                cursor: pointer;
-                // padding: 0.5rem 1rem;
-                border-top-left-radius: 1rem;
-                border-bottom-right-radius: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            .container__logo img{
+                width: 3rem;
             }
-            [class ^="item__"]:hover{
-                
-                color: white;
-                //transform: scale(1.1);
-                //box-shadow: .2rem .2rem 1rem rgba(3, 152, 122, .4);
-                padding: 0.5rem .8rem;
-                background-color: #03987A;
+
+            .containernav__navlist{
+                list-style: none;
+                display: flex;
+                gap: 1.3rem;
+            }
+
+            .containernav__navlist li{
+                cursor: pointer;
+                font-size: .9rem;
+                font-weight: 700;
+            }
+
+            .btnconnect{
+                padding: .7rem 1rem;
+                border: none;
+                background: linear-gradient(90deg, #03987A, #7FD4BE );
+                // font-size: 1em;
+                font-size: .9rem;
+                border-radius: .5rem;
+                color: #fff;
+                transition: all 0.5s ease;
+            }
+            .btnconnect:hover{
+                background: #03987A;
+                cursor: pointer;
             }
         }
     }
 
-
-    //main control
-    .main{
-        //background-color: red;
-        width: 100vw;
-        height: 80vh;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        //author picture
-        &__authorpic{
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+    .hero{
+        padding: 1.5rem 0;
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             align-items: center;
-            justify-content: center;
-           // background-color: black;
-            [class ^="authorpic__"]{
-                width: 80%;
+            gap: 3rem;
+            //background-color: #03987A;
+
+
+            .authorimg{
+                width: 100%;
                 border-radius: 1rem;
                 object-fit: contain;
                 object-position: top center;
             }
 
-        }
-
-        //author info
-        &__authorinfo{
-            [class ^="__infos"]{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+            .container__aboutauthor{
+                font-size: 2.5rem ;
+                .authorname{
+                    font-weight: 700;
+                    color: #03987A;
+                }
                 text-align: center;
-                gap: 0.4rem;
-                [class ^="infos__"]{
-                    font-size: clamp(2rem, 2.2rem, 20.4rem);
-                    span{
-                        font-size: clamp(2rem, 2.2rem, 20.4rem);
-                        font-weight: bold;
-                        color: #03987A;
-                    }
-                }
-                .infos__greeting{
-                    font-size: clamp(2.3rem, 2rem, 2.5rem);
-                    font-weight: bold;
-                }
             }
         }
     }
 
-
-    //footer
-    .footers{
-        display:flex;
-        flex-direction: row;
-        //background-color: black;
-        justify-content: flex-end;
-        align-items: center;
-        transition: all 0.5s ease;
-        //gap: 1rem;
-        &__foot{
-            //background-color: black;
-            position: relative;
-            right: 18%;
+    .footer{
+        padding-top: 1.5rem;
+        .container{
             display: flex;
-            flex-direction: row;
-            gap: 0.5rem ;
-            [class ^="footers__"]{
+            //align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            img{
+                width: 2rem;
                 transition: all 0.5s ease;
-                width: 1.6rem;
-                // padding-right: .2rem;
             }
-
-            padding: 0 1rem;
-            [class ^="footers__"]:hover{
-               transform:scale(1.3) ;
-               cursor: pointer;
+            img:hover{
+                scale: (1.5);
             }
         }
     }
 }
 
 
+// @mixin query ($screen){
+//     @each $key, $value in $bp{
+//         @if($screen == $value){
+//             @media (max-width:$screen){
+//                 @content;
+//             }
+//         }
+//     }
+// }
 
 
+// @include query(mobile){
+//     header
+//     body .header{
+//         padding: 1.5rem 0;
+//         .container{
+//             display: flex;
+//             flex-direction: row;
+//             align-items: center;
+//             justify-content: space-between;
+//             .container__logo img{
+//                 width: 3rem;
+//             }
 
-@include query(mobile){
-   body{
+//             .containernav__navlist{
+//                 display: none;
+//             }
 
-    //header control
-    .header{
-        //padding: 2rem 0;
-        justify-content: center;
-        background-color: #03987A;
-        &__logo{
-            font-size: clamp(2rem, 30vw, 1.38rem);
-            color: white;
-        }
+//             .containernav__navlist li{
+//                 display: none;
+//             }
 
+//             .btnconnect{
+//                 padding: .7rem 1rem;
+//                 border: none;
+//                 background: linear-gradient(90deg, #03987A, #7FD4BE );
+//                 // font-size: 1em;
+//                 font-size: .9rem;
+//                 border-radius: .5rem;
+//                 color: #fff;
+//                 transition: all 0.5s ease;
+//             }
+//             .btnconnect:hover{
+//                 background: #03987A;
+//                 cursor: pointer;
+//             }
+//         }
+//     }
+// }
 
-        // &__menucontrolbtns{
-        
-        // }
+@media (max-width: 480px){
 
+    //header
+    body .header{
+        .container{
+            .containernav__navlist{
+                display: none;
+            }
 
-        &__btns{
-            display: none;
+            // .containernav__navlist li{
+            //     display: none;
+            // }
+
             
         }
     }
 
-
-    //main control
-    .main{
-        //background-color: black;
-        width: 100vw;
-        height: 80vh;
-
-        display: flex;
-        flex-direction: column;
-        // gap:-2rem ;
-        &__authorpic{
-            //background-color: red;
-            width: 100%;
-            padding-right: 2rem;
-            [class ^="authorpic__"]{
-            
-                width: 80%;
-                //height: 60%;
-                //background-color: red;
-                object-position: top center;
-                object-fit: cover;
-                border-radius: 3rem;
-            
-            }   
-
+    body .hero{
+        //padding: 0;
+        padding-bottom: 0;
+        .container{
+            grid-template-columns: 1fr;
+           
+            .container__aboutauthor{
+                font-size: 1.5rem ;
+            }
         }
 
-        //author info
-        &__authorinfo{
-            
-            [class ^="__infos"]{
-                
-                gap: 0.2rem;
-                [class ^="infos__"]{
-                    font-size: clamp(1rem, 1.5rem, 1.6rem);
-                    span{
-                        font-size: clamp(1.5rem, 1.6rem, 1.8rem);
-                    }
-                }
-                .infos__greeting{
-                    display: none;
-                }
+    }
+   
+}
+
+@media (max-width: 780px){
+
+    body .hero{
+        .container{
+            padding: 2rem 0;
+        }
+    }
+    body .hero{
+        .container{
+            .container__aboutauthor{
+                font-size: 1.45rem;
             }
         }
     }
-
-
-    //footer
-    .footers{
-        position: absolute;
-        height: 10rem;
-        right: 0;
-        bottom: 15rem;
-        padding-right: .5rem;
-        &__foot{
-            position: none;
-            flex-direction: column;
-            right: 0;
-            gap: 1rem ;
-            align-items: center;
-            justify-content: center;
-            [class ^="footers__"]{
-                padding: 0;
-                margin: 0;
-            }
-        }
-    }
-
-   }
-
-
-
-
+   
 }
